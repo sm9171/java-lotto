@@ -1,10 +1,6 @@
 package lotto.view;
 
-import lotto.domain.Lotto;
 import lotto.domain.MyLottos;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class LottoManager {
 	private final InputView inputView;
