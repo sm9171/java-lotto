@@ -22,13 +22,12 @@ public class InputView {
 
 	public MyLottos inputManualLottoNumbers(Integer count) {
 		System.out.println("수동으로 구매할 번호를 입력해 주세요.");
-		List<Lotto> lottoList = new ArrayList<>();
+		List<String> lottoNumbers = new ArrayList<>();
 		for (int i = 0; i < count; i++) {
-			String lottoNumbers = new Scanner(System.in).nextLine();
-			Lotto manualLotto = Lotto.createManualLotto(lottoNumbers);
-			lottoList.add(manualLotto);
+			String lottoNumber = new Scanner(System.in).nextLine();
+			lottoNumbers.add(lottoNumber);
 		}
-		return new MyLottos(lottoList);
+		return MyLottos.createManualLottos(lottoNumbers);
 	}
 
 	public String getWinNumber() {

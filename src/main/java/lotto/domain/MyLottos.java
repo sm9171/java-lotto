@@ -36,6 +36,14 @@ public class MyLottos {
 		return new MyLottos(lottoList);
 	}
 
+	public static MyLottos createManualLottos(final List<String> lottoNumbers) {
+		List<Lotto> lottoList = lottoNumbers.stream()
+				.map(Lotto::new)
+				.collect(Collectors.toList());
+
+		return new MyLottos(lottoList);
+	}
+
 	public List<Lotto> getLottos() {
 		return List.copyOf(lottos);
 	}
